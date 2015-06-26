@@ -1,0 +1,17 @@
+<default>
+	<prerequisites>
+		<tag type="services" />
+		<bcastsystem type="DVB-S" />
+		<satellite type="360" />
+	</prerequisites>
+	
+	<info>
+		<author>alexvrs@yandex.ru</author>
+		<name>Eutelsat Sesat/W4 (36.0E)</name>
+	</info>
+
+	<files type="directories">
+		<file type="services" name="lamedb.360">
+		</file>
+	</files>
+</default>

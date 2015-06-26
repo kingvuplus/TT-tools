@@ -1,0 +1,29 @@
+<wizard>
+	<step id="settingsquestion">
+		<text value="This wizard update the covers for the media library, whatever they are displayed in the interface!" />
+		<list>
+			<listentry caption="Yes, configure type of media covers" step="coverconfig" />
+			<listentry caption="No, just start my media center" step="end" />
+		</list>
+		<code>
+self.clearSelectedKeys()
+self.selectKey("OK")
+		</code>
+	</step>
+	<step id="coverconfig" nextstep="end">
+		<text value="Please configure the type of covers (only create new ones), choose the types of covers (music, movies, photos) and click OK, that would start the update." />
+		<displaytext value="Configure covers for update" />
+		<config screen="CoversUpdateCenter" module="Plugins.Extensions.CoversUpdateCenter.plugin" args="True" type="ConfigList" />
+		<code>
+self.clearSelectedKeys()
+self.selectKey("OK")
+self.selectKey("UP")
+self.selectKey("DOWN")
+self.selectKey("LEFT")
+self.selectKey("RIGHT")
+		</code>
+	</step>
+	<step id="end" laststep="true">
+		<text value="The wizard is finished now." />
+	</step>
+</wizard>
